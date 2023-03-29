@@ -1,0 +1,22 @@
+.navigation {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navigation_Items {
+  margin-bottom: 10px;
+}
+
+.navigation_Items_Link {
+  border-bottom: 2px solid darkgray;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.navigation_Items_Link:hover {
+  border-bottom: 2px solid black;
+}

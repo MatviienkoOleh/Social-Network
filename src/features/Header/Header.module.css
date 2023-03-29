@@ -1,0 +1,42 @@
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+
+    background-color: darkgray;
+}
+
+.header_Form_Section {
+
+}
+
+.header_Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: purple;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 2px 2px black;
+    transition: 0.3s transform ease-in-out;
+}
+
+.header_Button:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.header_Form_Block {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}

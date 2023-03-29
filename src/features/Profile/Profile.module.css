@@ -1,0 +1,61 @@
+.profile_Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.profile_Settings_Icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  transition: 0.3s transform ease-in-out;
+}
+
+.profile_Settings_Icon:hover {
+  transform: scale(1.1);
+}
+
+.profile_Photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.profile_List {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.profile_List_item {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+
+.profile_Name {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.profile_Email {
+  font-size: 22px;
+}
+
+.profile_Buttons {
+  padding: 5px 10px;
+  font-weight: 600;
+  background-color: purple;
+  width: fit-content;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s transform ease-in-out;
+}
+
+.profile_Buttons:hover {
+  transform: scale(1.1);
+}

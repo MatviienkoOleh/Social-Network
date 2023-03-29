@@ -1,0 +1,31 @@
+.wall_Form {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.wall_Input {
+  font-size: 18px;
+  padding-left: 20px;
+
+  width: 100%;
+  border-radius: 10px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.wall_Button {
+  font-size: 20px;
+  font-weight: 600;
+  width: 150px;
+  padding: 5px 10px;
+  background-color: purple;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wall_Button:hover {
+  color: white;
+  background-color: black;
+}

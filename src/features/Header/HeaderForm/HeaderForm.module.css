@@ -1,0 +1,58 @@
+.logIn_Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: purple;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.LogIn_Label {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.logIn_Input {
+  width: 90%;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logIn_Button_Section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logIn_Main_Button {
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.3s transform ease-in-out;
+}
+
+.logIn_Main_Button:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: black;
+}
+
+.logIn_Link {
+    background-color: purple;
+    border: none;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.logIn_Link:hover {
+    text-decoration: underline;
+}
