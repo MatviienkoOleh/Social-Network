@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDatabase, ref, update, onValue } from "firebase/database";
-
+import { getStorage, uploadBytes, getDownloadURL } from 'firebase/storage';
+ 
 const firebaseConfig = {
   apiKey: "AIzaSyAwP0GeVlR7Vlmd6kTUguL0nekn04Q3pGg",
   authDomain: "new-d5941.firebaseapp.com",
@@ -13,17 +14,24 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
 const dataBase = getDatabase(app);
+export const auth = getAuth(app);
+const storage = getStorage(app);
 
 export const authState = {
   auth,
   onAuthStateChanged,
-}
+};
 
 export const db = {
   dataBase,
   update,
   ref,
   onValue,
+};
+
+export const st = {
+  storage,
+  uploadBytes,
+  getDownloadURL
 }

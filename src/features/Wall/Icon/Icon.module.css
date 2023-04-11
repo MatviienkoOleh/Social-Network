@@ -1,9 +1,18 @@
 .Icon {
   margin-right: 5px;
   cursor: pointer;
-  transition: .3s transform ease-in-out;
+  transition: 0.3s transform ease-in-out;
 }
 
 .Icon:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.close {
+  cursor: pointer;
+  transition: 0.3s transform ease-in-out;
+}
+
+.close:hover {
+  transform: scale(1.3);
 }

@@ -43,7 +43,6 @@ export default function HeaderForm({ setIsFormVisible }: UserFormProps) {
         .then((userCredential) => {
           setIsFormVisible(false);
           let referenceToDataBase = db.ref(db.dataBase, "users");
-
           //Create new User
           let newUser: UserI = {
             id: "" + new Date(),
@@ -62,26 +61,31 @@ export default function HeaderForm({ setIsFormVisible }: UserFormProps) {
             ],
             followers: ["admin@gmail.com"],
             following: ["admin@gmail.com"],
+            chats: [
+              {
+                chat: [
+                  {
+                    email: "admin@gmail.com",
+                    message: "Hi I am admin welcome!!!",
+                  },
+                ],
+                email: "admin@gmail.com",
+              },
+            ],
           };
-
           //Add new use to Data Base
           let arr = [...users];
           arr.push(newUser);
           db.update(referenceToDataBase, {
             ...arr,
           });
-
           //Reset the form
           reset();
-
           //Add current user to profileUser
           dispatch(setProfileUserInReduxState(userCredential.user.email));
-          
           alert("User has been created !");
         })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
+        .catch(() => {
           alert("User does not created !");
         });
     } else {
@@ -93,9 +97,7 @@ export default function HeaderForm({ setIsFormVisible }: UserFormProps) {
           setIsFormVisible(false);
           reset();
         })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
+        .catch(() => {
           alert("Try sign in again !");
         });
     }

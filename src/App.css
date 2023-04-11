@@ -4,14 +4,13 @@
   height: 100vh;
   padding-right: 200px;
   padding-left: 200px;
-
   background-color: black;
   color: black;
 }
 
 .App_Main {
-  width: 100%;
   display: flex;
+  width: 100%;
 }
 
 .Profile_Bar {
@@ -29,3 +28,46 @@
   padding: 20px 20px;
   background-color: darkgray;
 }
+
+@media (max-width: 1200px) {
+  .App {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .App {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 830px) {
+  .App {
+    height: 100%;
+  }
+
+  .App_Main {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .Profile_Bar {
+    align-items: center;
+    padding: 0px 0px;
+    padding-top: 20px;
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    height: fit-content;
+  }
+
+  .Route {
+    padding: 0px 0px;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+}
+

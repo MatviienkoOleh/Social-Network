@@ -30,29 +30,62 @@
 }
 
 .logIn_Main_Button {
-    padding: 8px 20px;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 5px;
-    border: none;
-    transition: 0.3s transform ease-in-out;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  transition: 0.3s transform ease-in-out;
 }
 
 .logIn_Main_Button:hover {
-    transform: scale(1.1);
-    color: white;
-    background-color: black;
+  transform: scale(1.1);
+  color: white;
+  background-color: black;
 }
 
 .logIn_Link {
-    background-color: purple;
-    border: none;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 600;
-    cursor: pointer;
+  background-color: purple;
+  border: none;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .logIn_Link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (max-width: 450px) {
+  .logIn_Form {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+  }
+
+  .logIn_Input {
+    width: 285px;
+    padding: 2px 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 320px) {
+  .logIn_Form {
+    width: 290px;
+    height: 200px;
+    padding: 5px;
+  }
+
+  .logIn_Input {
+    width: 275px;
+    margin-bottom: 20px;
+  }
+
+  .logIn_Button_Section {
+   margin-bottom: 5px;
+  }
 }

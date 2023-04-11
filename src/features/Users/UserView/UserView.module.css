@@ -1,0 +1,75 @@
+.userView {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  border-radius: 10px;
+  background-color: purple;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.userView:hover {
+  background-color: black;
+  color: white;
+}
+
+.userView_Img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.userView_Info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.userView_Info_Name {
+  font-size: 18px;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.userView_Info_Email {
+  font-size: 16px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+@media (max-width: 400px) {
+  .userView {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border-radius: 10px;
+    background-color: purple;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .userView_Img {
+    margin-right: 00px;
+  }
+
+  .userView_Info_Name {
+    font-size: 16px;
+  }
+  
+  .userView_Info_Email {
+    font-size: 14px;
+  }
+
+}

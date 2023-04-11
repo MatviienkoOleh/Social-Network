@@ -7,11 +7,16 @@ import Navigation from "./features/Navigation/Navigation";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { useEffect } from "react";
 import { authState, db } from "./firebase";
-import { setProfileUserInReduxState, setUsersFromDataBase } from "./features/Profile/ProfileSlice";
+import {
+  setProfileUserInReduxState,
+  setUsersFromDataBase,
+} from "./features/Profile/ProfileSlice";
+import { updateUsersFlag } from "./features/AnotherUser/AnotherUserSlice";
 
 function App() {
-  const users = useAppSelector(state => state.profile.users)
+  const users = useAppSelector((state) => state.profile.users);
   const profileUser = useAppSelector((state) => state.profile.profileUser);
+  const anotherUser = useAppSelector((state) => state.anotherUser);
   const dispatch = useAppDispatch();
 
   const getUsersFromDb = () => {
@@ -25,10 +30,16 @@ function App() {
   const setProfileUser = () => {
     authState.onAuthStateChanged(authState.auth, (user) => {
       if (user) {
-        dispatch(setProfileUserInReduxState(user.email))
+        dispatch(setProfileUserInReduxState(user.email));
       }
     });
-  }
+  };
+
+  useEffect(() => {
+    if (anotherUser.updateUserFlag !== true) {
+      dispatch(updateUsersFlag(true));
+    }
+  }, [anotherUser.updateUserFlag]);
 
   useEffect(() => {
     getUsersFromDb();
@@ -36,7 +47,7 @@ function App() {
 
   useEffect(() => {
     setProfileUser();
-  },[users])
+  }, [users]);
 
   return (
     <BrowserRouter>

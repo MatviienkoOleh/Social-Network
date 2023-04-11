@@ -1,0 +1,110 @@
+.anotherUser_Header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: bisque;
+  margin-bottom: 20px;
+}
+
+.anotherUser_Img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+.anotherUser_Info_Block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.anotherUser_Info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.anotherUser_Name {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.anotherUser_Email {
+  font-size: 18px;
+}
+
+.anotherUser_Buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 130px;
+}
+
+.anotherUser_Button {
+  text-align: center;
+  width: 120px;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: purple;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s all ease-in-out;
+}
+
+.anotherUser_Button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
+}
+
+.anotherUser_Buttons_Links {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.anotherUser_Buttons_Links:hover {
+  background-color: black;
+  color: rgb(255, 253, 253);
+}
+
+@media (max-width: 930px) {
+  .anotherUser_Img {
+    margin-right: 10px;
+  }
+  
+  .anotherUser_Name {
+    font-size: 18px;
+  }
+  
+  .anotherUser_Email {
+    font-size: 16px;
+  }
+
+  .anotherUser_Button {
+    padding: 2px 5px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 460px) {
+  .anotherUser_Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+  }
+  
+  .anotherUser_Info_Block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
